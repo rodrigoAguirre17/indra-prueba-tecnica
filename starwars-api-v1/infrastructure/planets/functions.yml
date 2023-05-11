@@ -1,0 +1,38 @@
+# Lambda 01
+getPlanets:
+  handler: lambdas/planets/src/index.getPlanets
+  events:
+    - http: 
+        path: /planets
+        method: get
+        cors: true
+  environment: 
+    endpoint: "https://swapi.py4e.com/api"
+# Lambda 02
+getPlanetsById:
+  handler: lambdas/planets/src/index.getPlanetsById
+  events:
+    - http:
+        path: /planets/{id}
+        method: get
+        cors: true
+  environment: 
+    endpoint: "https://swapi.py4e.com/api"
+# Lambda 03
+createPlanets:
+  handler: lambdas/planets/src/index.createPlanets
+  role: PlanetsLambdaRole
+  events:
+    - http:
+        path: /planets
+        method: post
+        cors: true
+# Lambda 04
+getPlanetsEs:
+  handler: lambdas/planets/src/index.getPlanetsEs
+  role: PlanetsLambdaRole
+  events:
+    - http:
+        path: /planets_es
+        method: get
+        cors: true

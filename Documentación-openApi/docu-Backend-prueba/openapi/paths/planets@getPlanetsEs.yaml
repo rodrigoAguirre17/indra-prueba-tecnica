@@ -1,0 +1,14 @@
+get:
+  summary: Obtener planetas local
+  description: Endpoint para obtener planetas local.
+  tags:
+    - Planetas local
+  responses:
+    '200':
+      $ref: ../components/response/getPlanetsEsRes.yaml
+    '400':
+      $ref: ../components/response/BadRequestResponse.yaml
+    '500':
+      $ref: ../components/response/InternalServerErrorResponse.yaml
+    default:
+      $ref: ../components/response/UnexpectedErrorResponse.yaml

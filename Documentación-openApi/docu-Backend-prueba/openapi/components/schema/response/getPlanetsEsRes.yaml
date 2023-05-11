@@ -1,0 +1,83 @@
+type: object
+properties:
+  status:
+    type: string
+    description: Estado del servidor
+    example: 'ok'
+  details:
+    type: array
+    description: Lista de planetas local
+    items:
+      type: object
+      properties:
+        nombre:
+          type: string
+          description: 'Nombre del planeta'
+          example: 'Tatooine'
+        periodo_rotacion:
+          type: string
+          description: 'Periodo de rotacion del planeta'
+          example: '23'
+        periodo_orbital:
+          type: string
+          description: 'Periodo orbital del planeta'
+          example: '304'
+        diametro:
+          type: string
+          description: 'diametro del planeta'
+          example: '10465'
+        clima:
+          type: string
+          description: 'Clima del planeta'
+          example: 'arid'
+        gravedad:
+          type: string
+          description: 'Gravedad del planeta'
+          example: '1 standard'
+        terreno:
+          type: string
+          description: 'Terreno del planeta'
+          example: 'desert'
+        superficie_agua:
+          type: string
+          description: 'Superficie de agua del planeta'
+          example: '1'
+        poblacion:
+          type: string
+          description: 'Poblacion del planeta'
+          example: '200000'
+        residentes:
+          type: array
+          description: 'Residentes del planeta'
+          example:
+            - "https://swapi.py4e.com/api/people/1/"
+            - "https://swapi.py4e.com/api/people/2/"
+            - "https://swapi.py4e.com/api/people/4/"
+            - "https://swapi.py4e.com/api/people/6/"
+            - "https://swapi.py4e.com/api/people/7/"
+            - "https://swapi.py4e.com/api/people/8/"
+            - "https://swapi.py4e.com/api/people/9/"
+            - "https://swapi.py4e.com/api/people/11/"
+            - "https://swapi.py4e.com/api/people/43/"
+            - "https://swapi.py4e.com/api/people/62/"
+        peliculas:
+          type: array
+          description: 'Peliculas del planeta'
+          example:
+            - "https://swapi.py4e.com/api/films/1/"
+            - "https://swapi.py4e.com/api/films/3/"
+            - "https://swapi.py4e.com/api/films/4/"
+            - "https://swapi.py4e.com/api/films/5/"
+            - "https://swapi.py4e.com/api/films/6/"
+        creado:
+          type: string
+          description: 'Fecha de creacion del planeta'
+          example: '2014-12-09T13:50:49.641000Z'
+        editado:
+          type: string
+          description: 'Fecha de edicion del planeta'
+          example: '2014-12-09T13:50:49.632000Z'
+        url:
+          type: string
+          description: 'Url del planeta'
+          example: 'https://swapi.py4e.com/api/planets/1/'

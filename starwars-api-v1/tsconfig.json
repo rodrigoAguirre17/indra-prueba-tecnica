@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "CommonJS",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "@core/*": ["@core/*"]
+    }
+  },
+  "include": [
+    "lambdas/**/src/**/*",
+    "lambdas/**/index.ts"
+  ],
+  "exclude": [
+    "node_modules", 
+    "**/*.spec.ts"
+  ]
+}

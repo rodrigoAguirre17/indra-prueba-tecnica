@@ -1,0 +1,16 @@
+description: Ok
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: ../schema/response/crearPlanetsRes.yaml
+    examples:
+      Create-Planet-Prueba-01:
+        summary: Planeta creado prueba
+        value:
+          status: 'OK'    
+          details: 'Created successfully.'
+headers:
+  Access-Control-Allow-Origin:
+    schema:
+      type: "string"

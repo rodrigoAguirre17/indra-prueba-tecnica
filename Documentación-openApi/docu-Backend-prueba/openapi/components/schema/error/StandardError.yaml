@@ -1,0 +1,25 @@
+type: object
+properties:
+  httpStatus:
+    type: integer
+    description: Código http de la respuesta
+    example: 200
+  message:
+    type: string
+    description: Descripción breve del error
+    example: Petición ejecutada satisfactoriamente
+  code:
+    type: string
+    description: Código interno de error si se desea especificar
+    example: '-'
+  details:
+    type: array
+    description: Array de errores
+    items:
+      type: string
+    example: null
+required:
+  - httpStatus
+  - message
+  - code
+  - details

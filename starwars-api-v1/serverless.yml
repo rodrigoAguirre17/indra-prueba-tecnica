@@ -1,0 +1,39 @@
+service: starWars-api-v1
+frameworkVersion: "3"
+
+custom:
+  name: STARWARS-API
+  stageDeploy: ${opt:stage, 'desa'}
+  serverless-offline:
+    httpPort: 4010
+    websocketPort: 4011
+    lambdaPort: 4012
+  planetsTable: 'planets-table-${self:provider.stage}'
+  
+package:
+  excludeDevDependencies: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  versionFunctions: false
+  stage: ${opt:stage, 'desa'}
+  region: us-east-1
+  environment:
+    PLANET_TABLE: ${self:custom.planetsTable}
+    ACCOUNT: 
+      Ref: AWS::AccountId
+    REGION: ${self:provider.region}
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-plugin-utils
+  - serverless-offline-dotenv
+resources:
+  - ${file(./infrastructure/planets/resources.yml)}
+
+functions:
+  getPlanets: ${file(./infrastructure/planets/functions.yml):getPlanets}
+  getPlanetsById: ${file(./infrastructure/planets/functions.yml):getPlanetsById}
+  createPlanets: ${file(./infrastructure/planets/functions.yml):createPlanets}
+  getPlanetsEs: ${file(./infrastructure/planets/functions.yml):getPlanetsEs}

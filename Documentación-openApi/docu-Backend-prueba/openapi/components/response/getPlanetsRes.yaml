@@ -1,0 +1,84 @@
+description: Ok
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: ../schema/response/getPlanetsRes.yaml
+    examples:
+      List-Planets-Prueba-01:
+        summary: Lista de Planetas prueba
+        value:
+          status: 'OK'    
+          details:
+            -
+              nombre: 'Tatooine'
+              periodo_rotacion: '23'
+              periodo_orbital: '304'
+              diametro: '10465'
+              clima: 'arid'
+              gravedad: '1 standard'
+              terreno: 'desert'
+              superficie_agua: '1'
+              poblacion: '200000'
+              residentes: 
+                - "https://swapi.py4e.com/api/people/1/"
+                - "https://swapi.py4e.com/api/people/2/"
+                - "https://swapi.py4e.com/api/people/4/"
+                - "https://swapi.py4e.com/api/people/6/"
+                - "https://swapi.py4e.com/api/people/7/"
+                - "https://swapi.py4e.com/api/people/8/"
+                - "https://swapi.py4e.com/api/people/9/"
+                - "https://swapi.py4e.com/api/people/11/"
+                - "https://swapi.py4e.com/api/people/43/"
+                - "https://swapi.py4e.com/api/people/62/"
+              peliculas: 
+                - "https://swapi.py4e.com/api/films/1/"
+                - "https://swapi.py4e.com/api/films/3/"
+                - "https://swapi.py4e.com/api/films/4/"
+                - "https://swapi.py4e.com/api/films/5/"
+                - "https://swapi.py4e.com/api/films/6/"
+              creado: '2014-12-09T13:50:49.641000Z'
+              editado: '2014-12-20T20:58:18.411000Z'
+              url: 'https://swapi.py4e.com/api/planets/1/'
+            -
+              nombre: 'Alderaan'
+              periodo_rotacion: '24'
+              periodo_orbital: '364'
+              diametro: '12500'
+              clima: 'temperate'
+              gravedad: '1 standard'
+              terreno: 'grasslands, mountains'
+              superficie_agua: '40'
+              poblacion: '200000000'
+              residentes: 
+                - "https://swapi.py4e.com/api/people/5/"
+                - "https://swapi.py4e.com/api/people/68/"
+                - "https://swapi.py4e.com/api/people/81/"
+              peliculas: 
+                - "https://swapi.py4e.com/api/films/1/"
+                - "https://swapi.py4e.com/api/films/6/"
+              creado: '2014-12-10T11:35:48.479000Z'
+              editado: '2014-12-20T20:58:18.420000Z'
+              url: 'https://swapi.py4e.com/api/planets/2/'
+            -
+              nombre: 'Yavin IV'
+              periodo_rotacion: '24'
+              periodo_orbital: '4818'
+              diametro: '10200'
+              clima: 'temperate, tropical'
+              gravedad: '1 standard'
+              terreno: 'jungle, rainforest'
+              superficie_agua: '8'
+              poblacion: '1000'
+              residentes: 
+                -
+              peliculas: 
+                - "https://swapi.py4e.com/api/films/1/"
+              creado: '2014-12-10T11:37:19.144000Z'
+              editado: '2014-12-20T20:58:18.421000Z'
+              url: 'https://swapi.py4e.com/api/planets/3/'
+
+headers:
+  Access-Control-Allow-Origin:
+    schema:
+      type: "string"

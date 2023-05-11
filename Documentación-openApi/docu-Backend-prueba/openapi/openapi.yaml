@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  title: API Planets
+  description: Este servicio gestiona los planetas de StarWars.
+  version: 1.0.0
+  contact:
+    name: Rodrigo Aguirre Gonzales
+    email: rodrigoaguirre.dev@gmail.com
+    x-role: Backend developer
+  x-logo:
+    url: https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg
+    altText: Starwars
+  x-api-catalog-categories:
+    type: API
+    ramo: Tecnologia
+    owner: Rodrigo 
+    platform: AWS
+  x-api-catalog-tags: 'Planetas'
+  x-security: 'AWS Signature'
+servers:
+  - url: 'http://localhost:3000/desa/planets'
+    description: Servidor Local
+  - url: 'Mi.cuenta.AWS.esta.fallando.com'
+    description: No puedo subir a la nube mis servicios AWS
+tags:
+  - name: Planetas
+    description: Este servicio gestiona los planetas de StarWars.
+
+paths:
+  /getPlanets:
+    $ref: paths/planets@getPlanets.yaml
+  /getPlanetsById:
+    $ref: paths/planets@getPlanetsById.yaml
+  /createPlanets:
+    $ref: paths/planets@createPlanets.yaml
+  /getPlanetsEs:
+    $ref: paths/planets@getPlanetsEs.yaml

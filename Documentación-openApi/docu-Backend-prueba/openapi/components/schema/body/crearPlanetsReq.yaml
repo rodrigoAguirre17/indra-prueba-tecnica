@@ -1,0 +1,87 @@
+type: object
+properties:
+  nombre:
+    type: string
+    description: Nombre del planeta
+    maxLength: 100
+    example: Tierra
+  periodo_rotacion:
+    type: string
+    description: Periodo de rotacion del planeta
+    maxLength: 50
+    example: '24'
+  periodo_orbital:
+    type: string
+    description: Periodo orbital del planeta
+    maxLength: 50
+    example: '365'
+  diametro:
+    type: string
+    description: Diametro del planeta
+    maxLength: 50
+    example: '12742'
+  clima:
+    type: string
+    description: Clima del planeta
+    maxLength: 20
+    example: 'calido'
+  gravedad:
+    type: string
+    description: Gravedad del planeta
+    maxLength: 20
+    example: '10'
+  terreno:
+    type: string
+    description: Terreno del planeta
+    maxLength: 20
+    example: 'bosques'
+  superficie_agua:
+    type: string
+    description: Superficie de agua del planeta
+    maxLength: 20
+    example: '1246325'
+  poblacion:
+    type: string
+    description: Poblacion del planeta
+    maxLength: 20
+    example: '7753'
+  residentes:
+    type: array
+    description: Residentes del planeta
+    maxLength: 20
+    example: 
+      - "https://swapi.py4e.com/api/people/1/"
+      - "https://swapi.py4e.com/api/people/2/"
+      - "https://swapi.py4e.com/api/people/4/"
+      - "https://swapi.py4e.com/api/people/6/"
+      - "https://swapi.py4e.com/api/people/7/"
+      - "https://swapi.py4e.com/api/people/8/"
+      - "https://swapi.py4e.com/api/people/9/"
+      - "https://swapi.py4e.com/api/people/11/"
+      - "https://swapi.py4e.com/api/people/43/"
+      - "https://swapi.py4e.com/api/people/62/"
+  peliculas:
+    type: array
+    description: Peliculas del planeta
+    maxLength: 20
+    example: 
+      - "https://swapi.py4e.com/api/films/1/"
+      - "https://swapi.py4e.com/api/films/3/"
+      - "https://swapi.py4e.com/api/films/4/"
+      - "https://swapi.py4e.com/api/films/5/"
+      - "https://swapi.py4e.com/api/films/6/"
+  creado:
+    type: string
+    description: Fecha de creacion del planeta
+    maxLength: 100
+    example: '2012-12-12T12:12:12.641000Z'
+  editado:
+    type: string
+    description: Fecha de edicion del planeta
+    maxLength: 100
+    example: '2014-12-17T13:50:49.312000Z'
+  url:
+    type: string
+    description: url del planeta
+    maxLength: 100
+    example: 'https://swapi.py4e.com/api/planets/26/'

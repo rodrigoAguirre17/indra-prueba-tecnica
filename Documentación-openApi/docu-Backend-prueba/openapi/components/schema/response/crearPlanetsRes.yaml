@@ -1,0 +1,10 @@
+type: object
+properties:
+  status:
+    type: string
+    description: 'Estado del servidor'
+    example: 'ok'
+  details:
+    type: string
+    description: 'Mensaje del servidor'
+    example: 'Created successfully.'

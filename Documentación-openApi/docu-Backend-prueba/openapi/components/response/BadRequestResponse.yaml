@@ -1,0 +1,10 @@
+description: Bad Request
+content:
+  application/json:
+    schema:
+      $ref: ../schema/error/StandardResponseError.yaml
+    example:
+      error:
+        httpStatus: 400
+        code: BAD_REQUEST
+        message: Method not allowed

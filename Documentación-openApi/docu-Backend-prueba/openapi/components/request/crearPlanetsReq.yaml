@@ -1,0 +1,39 @@
+required: true
+content:
+  application/json:
+    schema:
+      $ref: ../schema/body/crearPlanetsReq.yaml
+    examples:
+      Crear-Planeta-Prueba:
+        summary: Crear planeta prueba
+        value:
+          nombre: 'Tierra'
+          periodo_rotacion: '24'
+          periodo_orbital: '365'
+          diametro: '12742'
+          clima: 'calido'
+          gravedad: '10'
+          terreno: 'bosques'
+          superficie_agua: '1246325'
+          poblacion: '7753'
+          residentes: 
+            - "https://swapi.py4e.com/api/people/1/"
+            - "https://swapi.py4e.com/api/people/2/"
+            - "https://swapi.py4e.com/api/people/4/"
+            - "https://swapi.py4e.com/api/people/6/"
+            - "https://swapi.py4e.com/api/people/7/"
+            - "https://swapi.py4e.com/api/people/8/"
+            - "https://swapi.py4e.com/api/people/9/"
+            - "https://swapi.py4e.com/api/people/11/"
+            - "https://swapi.py4e.com/api/people/43/"
+            - "https://swapi.py4e.com/api/people/62/"
+          peliculas: 
+            - "https://swapi.py4e.com/api/films/1/"
+            - "https://swapi.py4e.com/api/films/3/"
+            - "https://swapi.py4e.com/api/films/4/"
+            - "https://swapi.py4e.com/api/films/5/"
+            - "https://swapi.py4e.com/api/films/6/"
+          creado: '2012-12-12T12:12:12.641000Z'
+          editado: '2014-12-17T13:50:49.312000Z'
+          url: 'https://swapi.py4e.com/api/planets/26/'
+          

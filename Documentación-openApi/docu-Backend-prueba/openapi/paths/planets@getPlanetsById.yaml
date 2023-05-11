@@ -1,0 +1,14 @@
+get:
+  summary: Obtener planetas por ID
+  description: Endpoint para obtener planetas por ID.
+  tags:
+    - PlanetsById
+  responses:
+    '200':
+      $ref: ../components/response/getPlanetsByIdRes.yaml
+    '400':
+      $ref: ../components/response/BadRequestResponse.yaml
+    '500':
+      $ref: ../components/response/InternalServerErrorResponse.yaml
+    default:
+      $ref: ../components/response/UnexpectedErrorResponse.yaml
